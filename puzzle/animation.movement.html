@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example,color_change;/*define your animation packs*/
+  animation-duration: 4s;
+  animation-iteration-count: infinite; /*make animation loop forever*/
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  50%  { left:200px; top:200px;}
+  75%  { left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+
+}
+@keyframes color_change {
+    from {background-color: red;}
+  to {background-color: yellow;}
+  to {background-color: black;}
+  to {background-color: blue;}
+}
+
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

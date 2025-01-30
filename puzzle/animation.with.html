@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #trickybutton{
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color:rgb(255, 0, 0);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
+</style>
+<body>
+    <button id="trickybutton" type="button" onclick="alert('congratulation you win')"> try to click me</button>
+</body>
+<script>
+
+    const button = document.getElementById('trickybutton');
+    var x,y;
+    function runaway(x,y){
+        x = (Math.random()*1000)+1; 
+        y = (Math.random()*1000)+1; 
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
+    }
+    button.addEventListener('mouseover', runaway);
+</script>
+</html>
